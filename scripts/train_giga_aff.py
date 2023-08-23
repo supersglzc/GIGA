@@ -10,8 +10,8 @@ import torch
 from torch.utils import tensorboard
 import torch.nn.functional as F
 
-from vgn.dataset_voxel import DatasetVoxel
-from vgn.networks import get_network, load_network
+from giga.dataset_voxel import DatasetVoxel
+from giga.networks import get_network, load_network
 
 LOSS_KEYS = ['loss_all', 'loss_qual', 'loss_rot', 'loss_width']
 
@@ -97,13 +97,13 @@ def main(args):
     # checkpoint model
     checkpoint_handler = ModelCheckpoint(
         logdir,
-        "vgn",
+        "giga",
         n_saved=1,
         require_empty=True,
     )
     best_checkpoint_handler = ModelCheckpoint(
         logdir,
-        "best_vgn",
+        "best_giga",
         n_saved=1,
         score_name="val_acc",
         score_function=default_score_fn,

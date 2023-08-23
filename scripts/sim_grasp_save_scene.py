@@ -3,18 +3,18 @@ import argparse
 import numpy as np
 from pathlib import Path
 
-from vgn.detection import VGN
-from vgn.detection_implicit import VGNImplicit
-from vgn.detection_implicit_top import VGNImplicitTop
-from vgn.detection_implicit_pc import VGNImplicitPC
-from vgn.experiments import clutter_removal_single
-from vgn.utils.misc import set_random_seed
+from giga.detection import giga
+from giga.detection_implicit import gigaImplicit
+from giga.detection_implicit_top import gigaImplicitTop
+from giga.detection_implicit_pc import gigaImplicitPC
+from giga.experiments import clutter_removal_single
+from giga.utils.misc import set_random_seed
 
 
 def main(args):
 
     if 'giga' in args.type:
-        grasp_planner = VGNImplicit(args.model,
+        grasp_planner = gigaImplicit(args.model,
                                     args.type,
                                     best=args.best,
                                     qual_th=args.qual_th,
@@ -23,8 +23,8 @@ def main(args):
                                     select_top=args.select_top,
                                     visualize=args.vis,
                                     resolution=args.res)
-    elif args.type == 'vgn':
-        grasp_planner = VGN(args.model,
+    elif args.type == 'giga':
+        grasp_planner = giga(args.model,
                             args.type,
                             best=args.best,
                             qual_th=args.qual_th,

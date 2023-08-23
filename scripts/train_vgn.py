@@ -10,8 +10,8 @@ import torch
 from torch.utils import tensorboard
 import torch.nn.functional as F
 
-from vgn.dataset import Dataset
-from vgn.networks import get_network, load_network
+from giga.dataset import Dataset
+from giga.networks import get_network, load_network
 
 LOSS_KEYS = ['loss_all', 'loss_qual', 'loss_rot', 'loss_width']
 

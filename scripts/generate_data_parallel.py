@@ -7,12 +7,12 @@ import scipy.signal as signal
 from tqdm import tqdm
 import multiprocessing as mp
 
-from vgn.grasp import Grasp, Label
-from vgn.io import *
-from vgn.perception import *
-from vgn.simulation import ClutterRemovalSim
-from vgn.utils.transform import Rotation, Transform
-from vgn.utils.implicit import get_mesh_pose_list_from_world
+from giga.grasp import Grasp, Label
+from giga.io import *
+from giga.perception import *
+from giga.simulation import ClutterRemovalSim
+from giga.utils.transform import Rotation, Transform
+from giga.utils.implicit import get_mesh_pose_list_from_world
 
 
 OBJECT_COUNT_LAMBDA = 4

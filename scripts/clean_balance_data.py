@@ -3,9 +3,9 @@ import argparse
 
 import numpy as np
 
-from vgn.io import *
-from vgn.perception import *
-from vgn.utils.transform import Rotation, Transform
+from giga.io import *
+from giga.perception import *
+from giga.utils.transform import Rotation, Transform
 
 def main(args):
     root = args.root

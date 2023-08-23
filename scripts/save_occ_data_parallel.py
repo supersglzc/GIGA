@@ -5,7 +5,7 @@ import argparse
 import numpy as np
 import multiprocessing as mp
 
-from vgn.utils.implicit import get_scene_from_mesh_pose_list, sample_iou_points
+from giga.utils.implicit import get_scene_from_mesh_pose_list, sample_iou_points
 
 def sample_occ(mesh_pose_list_path, num_point, uniform):
     mesh_pose_list = np.load(mesh_pose_list_path, allow_pickle=True)['pc']

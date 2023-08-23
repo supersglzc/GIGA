@@ -9,16 +9,16 @@ import torch
 import tqdm
 from torch.utils.data.dataloader import default_collate
 
-from vgn.dataset_voxel_occ import DatasetVoxelOccGeo, DatasetVoxelOccGeoROI
-from vgn.networks import load_network
+from giga.dataset_voxel_occ import DatasetVoxelOccGeo, DatasetVoxelOccGeoROI
+from giga.networks import load_network
 
-from vgn.ConvONets.conv_onet.generation import Generator3D
-from vgn.utils.implicit import get_mesh_pose_list_from_world, get_scene_from_mesh_pose_list
-from vgn.ConvONets.eval import MeshEvaluator
-from vgn.ConvONets.utils.libmesh import check_mesh_contains
-from vgn.dataset_pc import sample_point_cloud
-from vgn.utils.misc import set_random_seed
-from vgn.ConvONets.common import compute_iou
+from giga.ConvONets.conv_onet.generation import Generator3D
+from giga.utils.implicit import get_mesh_pose_list_from_world, get_scene_from_mesh_pose_list
+from giga.ConvONets.eval import MeshEvaluator
+from giga.ConvONets.utils.libmesh import check_mesh_contains
+from giga.dataset_pc import sample_point_cloud
+from giga.utils.misc import set_random_seed
+from giga.ConvONets.common import compute_iou
 
 def main(args):
     use_cuda = torch.cuda.is_available()

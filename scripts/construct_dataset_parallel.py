@@ -6,9 +6,9 @@ import open3d as o3d
 from tqdm import tqdm
 import multiprocessing as mp
 
-from vgn.io import *
-from vgn.perception import *
-from vgn.utils.misc import apply_noise
+from giga.io import *
+from giga.perception import *
+from giga.utils.misc import apply_noise
 
 
 RESOLUTION = 40

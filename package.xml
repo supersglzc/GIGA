@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package format="2">
-    <name>vgn</name>
+    <name>giga</name>
     <version>0.1.0</version>
     <description>Volumetric Grasping Network.</description>
 
     <maintainer email="mbreyer@ethz.ch">Michel Breyer</maintainer>
 
     <license>BSD</license>
-    <url>https://github.com/ethz-asl/vgn</url>
+    <url>https://github.com/ethz-asl/giga</url>
 
     <buildtool_depend>catkin</buildtool_depend>
 

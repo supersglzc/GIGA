@@ -4,7 +4,7 @@ import pickle
 from tqdm import tqdm
 import argparse
 import nvisii
-from vgn.utils.nvisii_render import NViSIIRenderer
+from giga.utils.nvisii_render import NViSIIRenderer
 
 def load_pkl(path):
     with open(path, 'rb') as f:

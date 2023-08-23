@@ -108,7 +108,7 @@ venv.bak/
 .vscode
 
 # data
-/data
+# /data
 *.swp
 
 # custom

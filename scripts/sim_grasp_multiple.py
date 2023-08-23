@@ -3,16 +3,16 @@ import numpy as np
 import json
 from pathlib import Path
 
-from vgn.detection import VGN
-from vgn.detection_implicit import VGNImplicit
-from vgn.experiments import clutter_removal
-from vgn.utils.misc import set_random_seed
+from giga.detection import vgn
+from giga.detection_implicit import gigaImplicit
+from giga.experiments import clutter_removal
+from giga.utils.misc import set_random_seed
 
 
 def main(args):
 
     if args.type in ['giga', 'giga_aff']:
-        grasp_planner = VGNImplicit(args.model,
+        grasp_planner = gigaImplicit(args.model,
                                     args.type,
                                     best=args.best,
                                     qual_th=args.qual_th,
@@ -21,7 +21,7 @@ def main(args):
                                     select_top=False,
                                     visualize=args.vis)
     elif args.type == 'vgn':
-        grasp_planner = VGN(args.model,
+        grasp_planner = vgn(args.model,
                             args.type,
                             best=args.best,
                             qual_th=args.qual_th,
